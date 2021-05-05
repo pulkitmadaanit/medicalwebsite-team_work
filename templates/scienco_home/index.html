@@ -1,0 +1,39 @@
+  {% extends 'scienco_home/base_home.html' %}
+  {% load static %}
+  {% block content %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div class="wow fadeIn">
+        <div class="hero-logo">
+          <img class="" src="{% static 'assets/img/logo.png' %} " alt="Imperial">
+        </div>
+      <h1>hello there</h1>
+        <h1>Welcome to Scienco India Solutions </h1>
+        <h3><span class="typed" data-typed-items="Manufacturer-Service, Provider-Importer"></span></h3>
+        <h3>One Stop for all types of  Printing & Instruments Solutions for Industry/Laboratory</h3>
+        <div class="actions">
+          <a href="{% url 'printing' %}"> <div class="card" style="width: 18rem;">
+
+            <img src="{% static 'assets/img/logo.png' %} " class="card-img-top" alt="site1">
+            <div class="card-body bg-dark">
+              <p class="card-text">CLICK HERE-
+                Printing-Advertisement Solutions for Industries/Laboratory .</p>
+            </div>
+          </div></a>
+
+          <a href="{% url 'instruments' %}"><div class="card" style="width: 18rem;">
+
+            <img src="{% static 'assets/img/logo.png' %} " class="card-img-top" alt="site2">
+            <div class="card-body bg-dark">
+              <p class="card-text">CLICK HERE-
+                Process –Instruments Solutions for Industries/Laboratory</p>
+            </div>
+          </div></a>  
+
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero --> 
+
+{% endblock content %}

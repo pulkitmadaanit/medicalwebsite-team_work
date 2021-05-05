@@ -1,0 +1,1 @@
+web: gunicorn scienco_india_solutions.wsgi --log-file -
