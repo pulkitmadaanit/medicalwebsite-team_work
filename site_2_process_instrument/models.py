@@ -43,7 +43,7 @@ class AboutUs(models.Model):
 
 class ContactModel(models.Model):
     name = models.CharField(max_length=50)
-    email = models.EmailField(max_length=50, unique=True)
+    email = models.EmailField(max_length=50)
     subject = models.CharField(max_length=50)
     message = models.TextField(max_length=500)
 
