@@ -34,12 +34,12 @@ def contact(request):
             email = form.cleaned_data.get('email')
             subject = "Scienco Medical "
     
-            message = f'Hi {name}, your response has been submitted  .'
+            message = f'Hi {name}, your response has been submitted .'
             email_from = settings.EMAIL_HOST_USER
             recipient_list = [email]
             send_mail( subject, message, email_from, recipient_list )
 
-            
+
 
     return render(request,"site2_instrument/project/contact.html")
 
