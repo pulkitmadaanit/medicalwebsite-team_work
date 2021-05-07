@@ -15,26 +15,44 @@
 <!-- End Hero -->
 
 <main id="main">
-    <!--crousel start -->
-    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+  
+  
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img style="max-width:100%; height:700px;" src="{% static 'site_2/assets/img/beaker.jpg' %}"
-                class="d-block w-100" alt="...">
+                <img style="max-width:100%; height:700px;" src="{% static 'site_2/assets/img/beaker.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+           
+            
+            <div class="carousel-item">
+                <img style="max-width:100%; height:700px;" src="{% static 'site_2/assets/img/about.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
             </div>
             
-            {#% for photo in images %#}
-            <div class="carousel-item">
-                <img style="max-width:100%; height:700px;" src="{% static 'site_2/assets/img/departments-2.jpg' %}" class="d-block w-100" alt="...">
-            </div>
-            {#% endfor %#}
+            
+            
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
             data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
@@ -49,12 +67,9 @@
             <div class="row">
                 <div class="col-lg-4 d-flex align-items-stretch">
                     <div class="content">
-                        <h3>Why Choose Medilab?</h3>
+                        <h3>Why Choose Scienco India Solutions?</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                            Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus
-                            optio ad corporis.
+                              We Scienco India Solutions are a leading trader and supplier of a broad range of Laboratory, Industrial Equipment & many more. These products are manufactured by considering best grade basic material under the supervision of well-trained and talented workforce at our vendors end. We are backed by a team of talented and experienced professionals for carrying our business operations in a reliable way.The organization is professionally managed by a team of talented & knowledgeable professionals-OEMs. 
                         </p>
                         <div class="text-center">
                             <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
@@ -66,26 +81,34 @@
                         <div class="row">
                             <div class="col-xl-4 d-flex align-items-stretch">
                                 <div class="icon-box mt-4 mt-xl-0">
-                                    <i class="bx bx-receipt"></i>
-                                    <h4>Corporis voluptates sit</h4>
-                                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut
-                                        aliquip</p>
+                                    <i class="bi bi-star-fill"></i>
+                                    <h4>Customer Satisfaction</h4>
+                                    <p><li style="list-style: none;"> Our efforts are dedicated to ensure the customer satisfaction and this is brought by following fair trade practices and business ethics. We strive to offer our products with utmost quality and are delivered within a stipulated time frame.We always realize the suggestions and feedback of our valued clients about our products.</li></p>
                                 </div>
                             </div>
                             <div class="col-xl-4 d-flex align-items-stretch">
                                 <div class="icon-box mt-4 mt-xl-0">
-                                    <i class="bx bx-cube-alt"></i>
-                                    <h4>Ullamco laboris ladore pan</h4>
-                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                        deserunt</p>
+                                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                                    <h4>Quality Compliance</h4>
+                                    <p> <li style="list-style: none;"> We are committed to provide Quality Equipment as per the National Standards shall ensure their satisfaction at all times through continual improvement with the effectiveness of Quality Management System. We maintain the top quality of these products by examining them strictly on certain quality factors before finally delivering them to our customers. </li> </p>
                                 </div>
                             </div>
                             <div class="col-xl-4 d-flex align-items-stretch">
                                 <div class="icon-box mt-4 mt-xl-0">
-                                    <i class="bx bx-images"></i>
-                                    <h4>Labore consequatur</h4>
-                                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere
+                                    <i class="bi bi-reception-4"></i>
+                                    <h4>4 Major Pillars/values of SCIENCO</h4>
+                                        <p>
+                                  <ul >
+                                        <li style="list-style: none;" >Competitive price structure.</li>
+                                        <br>
+                                        <li style="list-style: none;">Timely delivery.</li>
+                                        <br>
+                                        <li style="list-style: none;">Excellent Market Knowledge.</li>
+                                        <br>
+                                        <li style="list-style: none;">External Testing Facility.</li>
+                                    </ul> 
                                     </p>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -98,9 +121,11 @@
 
     
 {% include 'site2_instrument/project/counts.html' %}
+{% include 'site2_instrument/project/service.html' %}
 
 
-  
 
-    
+
+
+
   {% endblock content %}

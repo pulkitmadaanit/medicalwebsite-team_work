@@ -22,11 +22,19 @@ class HomeImageSlider(models.Model):
     
 class HomePageData(models.Model):
     TechnicalStaff= models.IntegerField()
-    YearsOfExperience = models.IntegerField()
+    YearsOfExperience = models.IntegerField(validators=[MaxValueValidator(99)])
     NumberOfSatisfiedClient = models.IntegerField()
     StatesCoveredInIndia = models.IntegerField(validators=[MaxValueValidator(29)])
 
+class InstrumentsParametersWise(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
 
+    def __str__(self):
+        return self.title
+    
+
+    
 class AboutUs(models.Model):
     description = models.TextField()
 
