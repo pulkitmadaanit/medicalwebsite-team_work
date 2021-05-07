@@ -18,6 +18,36 @@ def image_directory_path(instance, filename):
 class HomeImageSlider(models.Model):
     image = models.FileField(upload_to=image_directory_path, storage=image_storage)
 
+
+    
+class AboutUs(models.Model):
+    description = models.TextField()
+
+
+class ContactModel(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
+    subject = models.CharField(max_length=50)
+    message = models.TextField(max_length=500)
+    #our information to display 
+
+    def __str__(self):
+        return self.name
+
+class Contact_display(models.Model):
+    description = models.CharField(max_length=500)
+    display_location = models.CharField(max_length=100)
+    display_email = models.EmailField(max_length=254)
+    display_call = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.display_email
+    
+
+
+
+
+# ------------------------------------------------------------------------------------------------------------
 # class Table(models.Model):
 #     name = models.CharField(max_length=100)
 
@@ -36,17 +66,3 @@ class HomeImageSlider(models.Model):
 
 #     def __str__(self):
 #         return self.title
-    
-class AboutUs(models.Model):
-    description = models.TextField()
-
-
-class ContactModel(models.Model):
-    name = models.CharField(max_length=50)
-    email = models.EmailField(max_length=50)
-    subject = models.CharField(max_length=50)
-    message = models.TextField(max_length=500)
-
-    def __str__(self):
-        return self.name
-    
