@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.views.generic import TemplateView, ListView
-# from site_2_process_instrument.models import HomeImageSlider,Table,Product
+from site_2_process_instrument.models import HomeImageSlider, HomePageData
 
 
 # class HomeView(TemplateView):
@@ -43,4 +43,8 @@ def SiteOneHome(request):
 
 
 def SiteTwoHome(request):
-    return render(request,"site2_instrument/project/index.html")
+    context = {
+        "data":HomePageData.objects.all()[:1]
+    }
+    data= HomePageData.objects.all()[:1]
+    return render(request,"site2_instrument/project/index.html",context)

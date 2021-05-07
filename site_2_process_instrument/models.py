@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.files.storage import FileSystemStorage
 from django.conf import settings
+from django.core.validators import MaxValueValidator
 # from django.utils.translation import 
 
 
@@ -17,9 +18,15 @@ def image_directory_path(instance, filename):
 
 class HomeImageSlider(models.Model):
     image = models.FileField(upload_to=image_directory_path, storage=image_storage)
-
-
     
+    
+class HomePageData(models.Model):
+    TechnicalStaff= models.IntegerField()
+    YearsOfExperience = models.IntegerField()
+    NumberOfSatisfiedClient = models.IntegerField()
+    StatesCoveredInIndia = models.IntegerField(validators=[MaxValueValidator(29)])
+
+
 class AboutUs(models.Model):
     description = models.TextField()
 
