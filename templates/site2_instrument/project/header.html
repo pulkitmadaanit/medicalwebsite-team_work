@@ -24,7 +24,7 @@
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="{% static 'assets/img/logo.png' %} " alt="" class="img-fluid"></a>-->
 
-      <nav id="navbar" class="navbar  order-last order-lg-0">
+      <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto " href="{% url 'Home' %}">Home</a></li>
           <li><a class="nav-link scrollto" href="{% url 'About' %}">About</a></li>
@@ -47,11 +47,11 @@
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
             </ul> -->
-            <!-- --------------------------------------- -->
-            <div class="dropdown-contentt dropdown ">
-              <div class="header">
+            <!-- =======================================- -->
+            <ul style="width: max-content;">
+              <!-- <div class="header">
                 <h2>Mega Menu</h2>
-              </div>    
+              </div>      -->
               <div class="row">
                 <div class="column">
                   <h3>Category 1</h3>
@@ -71,9 +71,27 @@
                   <a href="#">Link 2</a>
                   <a href="#">Link 3</a>
                 </div>
+                <div class="column">
+                  <h3>Category 4</h3>
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+                <div class="column">
+                  <h3>Category 5</h3>
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+                <div class="column">
+                  <h3>Category 6</h3>
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
               </div>
-            </div>
-            <!-- --------------------------------------------- -->
+            </ul>
+            <!-- ======================================================= -->
           </li>
           <li><a class="nav-link scrollto" href="{% url 'Contact' %}">Contact</a></li>
         </ul>
