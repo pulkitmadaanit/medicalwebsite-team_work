@@ -11,7 +11,7 @@ image_storage = FileSystemStorage(
     # Url for file
     base_url=u'{0}my_sell/'.format(settings.MEDIA_URL),
 )
-
+  
 def image_directory_path(instance, filename):
     # file will be uploaded to MEDIA_ROOT/my_sell/picture/<filename>
     return u'picture/{0}'.format(filename)
