@@ -1,0 +1,47 @@
+{% extends 'site2_instrument/base_site2.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="navbarr">
+      
+      <div class="dropdownn">
+        <button class="dropbtnn">Dropdown 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-contentt">
+          <div class="header">
+            <h2>Mega Menu</h2>
+          </div>    
+          <div class="row">
+            <div class="column">
+              <h3>Category 1</h3>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+            <div class="column">
+              <h3>Category 2</h3>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+            <div class="column">
+              <h3>Category 3</h3>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    
+    <div style="padding:16px">
+      <h3>Responsive Mega Menu (Full-width dropdown in navbar)</h3>
+      <p>Hover over the "Dropdown" link to see the mega menu.</p>
+      <p>Resize the browser window to see the responsive effect.</p>
+    </div>
+    {% endblock content %}
+    
+  

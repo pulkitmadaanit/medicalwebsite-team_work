@@ -50,3 +50,4 @@ def SiteTwoHome(request):
     }
     data= HomePageData.objects.all()[:1]
     return render(request,"site2_instrument/project/index.html",context)
+

@@ -63,6 +63,38 @@ class Contact_display(models.Model):
     
 
 
+class Blog(models.Model):
+    name= models.CharField(max_length=50,help_text='Enter your <b>name</b> which will be display on blog')
+    Qualification=models.CharField(max_length=50, help_text='Enter your <b>Qualification</b> which will be display on blog')
+    description=models.CharField(max_length=300,help_text='Enter your <b>description</b> which will be display on blog')
+
+
+    image = models.FileField(upload_to=image_directory_path, storage=image_storage,max_length=100,default=None)
+
+    def __str__(self):
+        return self.name
+    
+
+
+class ProductTable(models.Model):
+    name= models.CharField(max_length=50,help_text='Enter your <b>ProductTableName</b> which will be display on ProdcutPage')
+
+    def __str__(self):
+        return self.name
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  # ------------------------------------------------------------------------------------------------------------
 # class Table(models.Model):

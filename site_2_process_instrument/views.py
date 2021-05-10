@@ -1,7 +1,7 @@
 from django.shortcuts import render,HttpResponse, redirect
 from django.views import View
 from site_2_process_instrument.forms import ContactForm
-from site_2_process_instrument.models import AboutUs, ContactModel, Contact_display
+from site_2_process_instrument.models import AboutUs, ContactModel, Contact_display,Blog
 from django.conf import settings
 from django.core.mail import send_mail
 from django.core.mail import EmailMultiAlternatives
@@ -16,8 +16,12 @@ def home(request):
     return render(request,"home/index.html")
 
 def about(request):
+    context= {
+        "text": AboutUs.objects.all(),
+        "data" : Blog.objects.all()
+    }
     
-    return render(request,"site2_instrument/project/about.html", {"text": AboutUs.objects.all()})
+    return render(request,"site2_instrument/project/about.html", context)
 
 def contact(request):
     if request.method == "POST":
@@ -38,5 +42,7 @@ def contact(request):
 
     return render(request,"site2_instrument/project/contact.html",{"Contact_display":Contact_display.objects.all()[:1]})
 
+def mega(request):
+    return render(request,"site2_instrument/megadropdown.html")
 
 
