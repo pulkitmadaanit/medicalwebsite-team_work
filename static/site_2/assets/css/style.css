@@ -770,8 +770,8 @@ section {
 }
 
 .about .video-box {
-  background: url("/static/site_2/assets/img/logo.png") center center no-repeat;
-  <!-- background-size: cover; -->
+  background: url("/static/site_2/assets/img/beaker.jpg ") center center no-repeat;
+  background-size: cover;
   min-height: 300px;
 }
 
