@@ -16,24 +16,18 @@
     </div>
   </div>
 
-  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto"><a href="{% url 'Home' %}">Scienco India Solutions</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="{% static 'assets/img/logo.png' %} " alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto " href="{% url 'Home' %}">Home</a></li>
           <li><a class="nav-link scrollto" href="{% url 'About' %}">About</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#services">Services</a></li> -->
-          <!-- <li><a class="nav-link scrollto" href="#departments">Departments</a></li> -->
-          <!-- <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li> -->
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <!-- <ul>
-              <li><a href="#">Drop Down 1</a></li>
+            <ul style="width: 100vh; heigth: 100vh;">
+              <!-- <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
@@ -45,61 +39,199 @@
               </li>
               <li><a href="#">Drop Down 2</a></li>
               <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul> -->
-            <!-- =======================================- -->
-            <ul style="width: max-content;">
-              <!-- <div class="header">
-                <h2>Mega Menu</h2>
-              </div>      -->
-              <div class="row">
-                <div class="column">
-                  <h3>Category 1</h3>
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-                <div class="column">
-                  <h3>Category 2</h3>
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-                <div class="column">
-                  <h3>Category 3</h3>
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-                <div class="column">
-                  <h3>Category 4</h3>
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-                <div class="column">
-                  <h3>Category 5</h3>
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-                <div class="column">
-                  <h3>Category 6</h3>
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
+              <li><a href="#">Drop Down 4</a></li> -->
+              
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Products
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 100vh; heigth: 100vh;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4">
+                    <span class="text-uppercase text-white">Category 1</span>
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link item</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link item</a>
+                    </li>
+                  </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
                 </div>
               </div>
-            </ul>
-            <!-- ======================================================= -->
+            </div>
           </li>
           <li><a class="nav-link scrollto" href="{% url 'Contact' %}">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
       
 
       <a href="{% url 'home' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Go To</span> Dashboard </a>
 
     </div>
-  </header><!-- End Header -->
+  </header>
+
+  <!-- ====================================================== -->
+  <!-- <nav class="navbar order-last order-lg-0">
+    <a class="navbar-brand" href="#">Mega Dropdown</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Category</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Category 1
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+  
+            
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-uppercase text-white">Category 1</span>
+                  <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link item</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link item</a>
+                  </li>
+                </ul>
+                </div>
+                <div class="col-md-4">
+                  <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link item</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link item</a>
+                  </li>
+                </ul>
+                </div>
+                <div class="col-md-4">
+                  <a href="">
+                    <img src="https://dummyimage.com/200x100/ccc/000&text=image+link" alt="" class="img-fluid">
+                  </a>
+                  <p class="text-white">Short image call to action</p>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Category 2
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+  
+  
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="text-uppercase text-white">Category 2</span>
+                  <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link item</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link item</a>
+                  </li>
+                </ul>
+                </div>
+                <div class="col-md-4">
+                  <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link item</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link item</a>
+                  </li>
+                </ul>
+                </div>
+                <div class="col-md-4">
+                  <a href="">
+                    <img src="https://dummyimage.com/200x100/ccc/000&text=image+link" alt="" class="img-fluid">
+                  </a>
+                  <p class="text-white">Short image call to action</p>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Category 3
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+  
+  
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                 <span class="text-uppercase text-white">Category 3</span>
+                  <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link item</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link item</a>
+                  </li>
+                </ul>
+                </div>
+                <div class="col-md-4">
+                  <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link item</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link item</a>
+                  </li>
+                </ul>
+                </div>
+                <div class="col-md-4">
+                  <a href="">
+                    <img src="https://dummyimage.com/200x100/ccc/000&text=image+link" alt="" class="img-fluid">
+                  </a>
+                  <p class="text-white">Short image call to action</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav> -->
