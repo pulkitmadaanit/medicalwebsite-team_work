@@ -1,7 +1,7 @@
 from django.shortcuts import render,HttpResponse, redirect
 from django.views import View
 from site_2_process_instrument.forms import ContactForm
-from site_2_process_instrument.models import AboutUs, ContactModel, Contact_display,Blog
+from site_2_process_instrument.models import *
 from django.conf import settings
 from django.core.mail import send_mail
 from django.core.mail import EmailMultiAlternatives
@@ -48,4 +48,4 @@ def mega(request):
 
 def product_category(request):
 
-    return render(request,"site2_instrument/project/product_category.html")
+    return render(request,"site2_instrument/project/product_category.html", {"products": ProductCategory.objects.all()})
