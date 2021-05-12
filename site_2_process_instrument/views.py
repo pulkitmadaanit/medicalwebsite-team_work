@@ -46,3 +46,6 @@ def mega(request):
     return render(request,"site2_instrument/megadropdown.html")
 
 
+def product_category(request):
+
+    return render(request,"site2_instrument/project/product_category.html")

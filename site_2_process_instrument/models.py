@@ -75,15 +75,31 @@ class Blog(models.Model):
         return self.name
     
 
-
-class ProductTable(models.Model):
+class ProductCategory(models.Model):
     name= models.CharField(max_length=50,help_text='Enter your <b>ProductTableName</b> which will be display on ProdcutPage')
+
+    
 
     def __str__(self):
         return self.name
     
 
+class SubCategory(models.Model):
+    sub_title = models.CharField(max_length=50, help_text='Enter your <b>sub_title</b> which will be display on PRODUCT section')
+    product_category =  models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.sub_title
+    
 
+
+class ProductDetail(models.Model):
+    description = models.CharField(max_length=100, help_text='Enter your <b>description</b> which will be display on PRODUCT section')
+    price = models.FloatField(help_text='Enter your <b>price</b> which will be display on PRODUCT section')
+    sub_category = models.ForeignKey(SubCategory, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.description
+    
 
 
 
